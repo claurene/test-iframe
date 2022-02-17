@@ -4,6 +4,10 @@
 
 <h2>Test Laurene</h2>
 
+<label>event id :</label><input type="text" id="event-id" value="METZ-BOURG"></input>
+
+<label>basket id :</label><input type="text" id="basket-id" value="BK00001"></input>
+
 <ul>
   <li><input type="checkbox" id="B1-A1"></input>B1-A1</li>
   <li><input type="checkbox" id="B2-A1"></input>B2-A1</li>
@@ -17,56 +21,57 @@
 <p id="demo"></p>
 
 <script>
-// const json = '[ \
-// {"event_code":"METZ-BOURG",  \
-// "basket_code":"BK00001", \
-// "seat_code":"A1-A4", \
-// "rate_code":"NORMAL"}, \
-// {"event_code":"METZ-BOURG", \
-// "basket_code":"BK00001", \
-// "seat_code":"A1-A3", \
-// "rate_code":"NORMAL"}, \
-// {"event_code":"METZ-BOURG", \
-// "basket_code":"BK00002", \
-// "seat_code":"A1-A1", \
-// "rate_code":"REDUIT"}, \
-// {"event_code":"METZ-BOURG", \
-// "basket_code":"BK00003", \
-// "seat_code":"A1-A2", \
-// "rate_code":"REDUIT"} \
-// ]';
+// Le code est très moche mais c'est pour un test rapide
 const element = document.getElementById("btn-valid-selection");
 element.addEventListener("click", function() {
-  // document.getElementById("demo").innerHTML = "Hello World";
+
+  var eventid = document.getElementById("event-id").value;
+  var basketid = document.getElementById("basket-id").value;
+
   var json = '[';
-  
+
   if (document.getElementById("B1-A1").checked) {
-    json += '{"event_code":"METZ-BOURG",  \
-    "basket_code":"BK00001", \
+    if (json != '[') {
+      json += ',';
+    }
+    json += '{"event_code":"'+eventid+'",  \
+    "basket_code":"'+basketid+'", \
     "seat_code":"B1-A1", \
     "rate_code":"NORMAL"}'
   };
   if (document.getElementById("B2-A1").checked) {
-    json += '{"event_code":"METZ-BOURG",  \
-    "basket_code":"BK00001", \
+    if (json != '[') {
+      json += ',';
+    }
+    json += '{"event_code":"'+eventid+'",  \
+    "basket_code":"'+basketid+'", \
     "seat_code":"B2-A1", \
     "rate_code":"NORMAL"}'
   };
   if (document.getElementById("B3-A1").checked) {
-    json += '{"event_code":"METZ-BOURG",  \
-    "basket_code":"BK00001", \
+    if (json != '[') {
+      json += ',';
+    }
+    json += '{"event_code":"'+eventid+'",  \
+    "basket_code":"'+basketid+'", \
     "seat_code":"B3-A1", \
     "rate_code":"NORMAL"}'
   };
   if (document.getElementById("B4-A1").checked) {
-    json += '{"event_code":"METZ-BOURG",  \
-    "basket_code":"BK00001", \
+    if (json != '[') {
+      json += ',';
+    }
+    json += '{"event_code":"'+eventid+'",  \
+    "basket_code":"'+basketid+'", \
     "seat_code":"B4-A1", \
     "rate_code":"NORMAL"}'
   };
   if (document.getElementById("B5-A1").checked) {
-    json += '{"event_code":"METZ-BOURG",  \
-    "basket_code":"BK00001", \
+    if (json != '[') {
+      json += ',';
+    }
+    json += '{"event_code":"'+eventid+'",  \
+    "basket_code":"'+basketid+'", \
     "seat_code":"B5-A1", \
     "rate_code":"NORMAL"}'
   };
