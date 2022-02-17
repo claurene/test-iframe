@@ -9,11 +9,29 @@
 <p id="demo"></p>
 
 <script>
+const json = '[ \
+{"event_code":"METZ-BOURG",  \
+"basket_code":"BK00001", \
+"seat_code":"A1-A4", \
+"rate_code":"NORMAL"}, \
+{"event_code":"METZ-BOURG", \
+"basket_code":"BK00001", \
+"seat_code":"A1-A3", \
+"rate_code":"NORMAL"}, \
+{"event_code":"METZ-BOURG", \
+"basket_code":"BK00002", \
+"seat_code":"A1-A1", \
+"rate_code":"REDUIT"}, \
+{"event_code":"METZ-BOURG", \
+"basket_code":"BK00003", \
+"seat_code":"A1-A2", \
+"rate_code":"REDUIT"} \
+]';
 const element = document.getElementById("btn-valid-selection");
 element.addEventListener("click", function() {
-  document.getElementById("demo").innerHTML = "Hello World";
+  // document.getElementById("demo").innerHTML = "Hello World";
 
-  window.parent.postMessage('reply', '*');
+  window.parent.postMessage(json, '*');
 });
 
 </script> 
