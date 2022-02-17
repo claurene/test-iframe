@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Test Laurene - iframe</h1>
+
+<p id="result"></p>
+
+<iframe id="laurene-iframe" src="./testlaurene.html" style="border: none;"> </iframe>
+
+<script>
+window.onmessage = function(event){
+        document.getElementById("result").innerHTML = event.data;
+};
+</script> 
+
+</body>
+</html>
+

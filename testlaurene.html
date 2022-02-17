@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Test Laurene</h2>
+
+<button id="btn-valid-selection">Valider</button>
+
+<p id="demo"></p>
+
+<script>
+const element = document.getElementById("btn-valid-selection");
+element.addEventListener("click", function() {
+  document.getElementById("demo").innerHTML = "Hello World";
+
+  window.top.postMessage('reply', '*');
+});
+
+</script> 
+
+</body>
+</html>
+
